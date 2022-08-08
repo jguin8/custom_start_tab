@@ -1,4 +1,4 @@
-const NAME = "John";
+const NAME = "Tevett";
 const WELCOME_MESSAGE_TEMPLATE = ["night", "morning", "afternoon", "evening"];
 
 // All shortcuts are in a `SHORTCUT_STARTER+shortcutKey` format. 
@@ -14,30 +14,43 @@ const SHORTCUT_TIMEOUT = 1500;
 // but intended to be used with just regular latin letters.
 const MASTER_MAP = [
     {
-        "groupName": "Studies",
+        "groupName": "NetSuite",
         "items":[
-            {"name": "Item A", "shortcutKey": "q", "url": "https://google.com/?q=q"},
-            {"name": "Item B", "shortcutKey": "w", "url": "https://google.com/?q=w"},
-            {"name": "Item C", "shortcutKey": "e", "url": "https://google.com/?q=e"}
+            {"name": "Great Star", "shortcutKey": "a", "url": "https://6145117.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
+            {"name": "Terra Rose", "shortcutKey": "s", "url": "https://6751627.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
+            {"name": "Everyone Designs", "shortcutKey": "d", "url": "https://7236299.app.netsuite.com/app/center/card.nl?sc=-29&whence="}
         ]
     },
     {
-        "groupName": "Work",
+        "groupName": "Switchboard",
         "items":[
-            {"name": "Item D", "shortcutKey": "a", "url": "https://google.com/?q=a"},
-            {"name": "Item E", "shortcutKey": "s", "url": "https://google.com/?q=s"},
-            {"name": "Item F", "shortcutKey": "d", "url": "https://google.com/?q=d"}
+            {"name": "Airflow", "shortcutKey": "z", "url": "https://deployments.gcp0001.us-east4.astronomer.io/magnetic-sunspot-7057/airflow/home"},
+            {"name": "Vercel", "shortcutKey": "x", "url": "https://vercel.com/mlabs/switchboard"},
+            {"name": "Cosmos", "shortcutKey": "x", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/Switchboard/providers/Microsoft.DocumentDb/databaseAccounts/nile-switchboard/overview"},
+            {"name": "Blob Storage", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/Switchboard/providers/Microsoft.Storage/storageAccounts/switchboard/overview"},
+            {"name": "True Commerce", "shortcutKey": "q", "url": "https://foundry.truecommerce.com/core/Default.html"},
+            {"name": "Celigo", "shortcutKey": "w", "url": "https://integrator.io/signin"},
+            {"name": "Infor", "shortcutKey": "e", "url": "https://mingle-portal.inforcloudsuite.com/X9K98RYL2D6P5AD4_PRD"}
         ]
     },
     {
-        "groupName": "Personal",
+        "groupName": "Soapbox",
         "items":[
-            {"name": "Item I", "shortcutKey": "z", "url": "https://google.com/?q=z"},
-            {"name": "Item J", "shortcutKey": "x", "url": "https://google.com/?q=x"},
-            {"name": "Item K", "shortcutKey": "c", "url": "https://google.com/?q=c"}
+            {"name": "Airflow", "shortcutKey": "z", "url": "https://deployments.gcp0001.us-east4.astronomer.io/elementary-astronaut-5472/airflow/home"},
+            {"name": "Vercel", "shortcutKey": "x", "url": "https://vercel.com/mlabs/linker"},
+            {"name": "Blob Storage", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/mlabs/providers/Microsoft.Storage/storageAccounts/mlabstorage/overview"}
+        ]
+    },
+    {
+        "groupName": "Astronomer",
+        "items":[
+            {"name": "Home", "shortcutKey": "z", "url": "https://app.gcp0001.us-east4.astronomer.io/w/ck2fbj7td52e50936gtki4sa7"},
+            {"name": "Token", "shortcutKey": "x", "url": "https://app.gcp0001.us-east4.astronomer.io/token"},
+            {"name": "Forum", "shortcutKey": "x", "url": "https://forum.astronomer.io/top?period=yearly"}
         ]
     }
 ]
+
 
 let $container = document.getElementById("content");
 let getUrl = {};
@@ -110,9 +123,10 @@ function shortcutListener(e) {
 }
 
 function main(){
+
     setupWelcomeMessage();
     setupGroups();
     document.addEventListener('keyup', shortcutListener, false);
 }
 
-main();
+main()
