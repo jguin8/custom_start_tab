@@ -41,19 +41,21 @@ const MASTER_MAP = [
             {
                 "groupName": "Switchboard",
                 "items":[
-                    {"name": "Airflow", "shortcutKey": "z", "url": "https://deployments.gcp0001.us-east4.astronomer.io/magnetic-sunspot-7057/airflow/home"},
-                    {"name": "Vercel", "shortcutKey": "x", "url": "https://vercel.com/mlabs/switchboard"},
+                    {"name": "Deployment", "shortcutKey": "z", "url": "https://deployments.gcp0001.us-east4.astronomer.io/magnetic-sunspot-7057/airflow/home"},
+                    {"name": "Local Instance", "shortcutKey": "z", "url": "http://localhost:8081/"},
                     {"name": "Cosmos", "shortcutKey": "x", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/Switchboard/providers/Microsoft.DocumentDb/databaseAccounts/nile-switchboard/overview"},
                     {"name": "Blob Storage", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/Switchboard/providers/Microsoft.Storage/storageAccounts/switchboard/overview"},
+                    {"name": "sFTP Storage", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourcegroups/Switchboard/providers/Microsoft.Storage/storageAccounts/switchboardsftp/overview"}, 
                     {"name": "True Commerce", "shortcutKey": "q", "url": "https://foundry.truecommerce.com/core/Default.html"},
-                    {"name": "Celigo", "shortcutKey": "w", "url": "https://integrator.io/signin"},
                     {"name": "Infor", "shortcutKey": "e", "url": "https://mingle-portal.inforcloudsuite.com/X9K98RYL2D6P5AD4_PRD"}
                 ]
             },
             {
                 "groupName": "Soapbox",
                 "items":[
-                    {"name": "Airflow", "shortcutKey": "z", "url": "https://deployments.gcp0001.us-east4.astronomer.io/elementary-astronaut-5472/airflow/home"},
+                    {"name": "Deployment", "shortcutKey": "z", "url": "https://deployments.gcp0001.us-east4.astronomer.io/elementary-astronaut-5472/airflow/home"},
+                    {"name": "Local Instance", "shortcutKey": "z", "url": "http://localhost:8080/"},
+                    {"name": "Cosmos", "shortcutKey": "x", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/mlabs/providers/Microsoft.DocumentDb/databaseAccounts/mlabs/overview"},
                     {"name": "Vercel", "shortcutKey": "x", "url": "https://vercel.com/mlabs/linker"},
                     {"name": "Blob Storage", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/mlabs/providers/Microsoft.Storage/storageAccounts/mlabstorage/overview"},
                     {"name": "Reports", "shortcutKey": "q", "url": "https://terrarose.sharepoint.com/sites/nile/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fnile%2FShared%20Documents%2FReports&viewid=42a6f1a6%2D6881%2D4632%2D9d5c%2D07b55a3a8a8d"}
@@ -68,7 +70,8 @@ const MASTER_MAP = [
             {"name": "CRON", "shortcutKey": "x", "url": "https://crontab.guru/#0_0_*_*_3"},
             {"name": "Azure Portal", "shortcutKey": "c", "url": "https://portal.azure.com/#home"},
             {"name": "Sharepoint", "shortcutKey": "q", "url": "https://terrarose.sharepoint.com/_layouts/15/sharepoint.aspx"},
-            {"name": "DataDog", "shortcutKey": "w", "url": "https://us3.datadoghq.com/account/login/id/2c82dc80-9e62-11ec-b63b-da7ad0900003"}
+            {"name": "DataDog", "shortcutKey": "w", "url": "https://us3.datadoghq.com/account/login/id/2c82dc80-9e62-11ec-b63b-da7ad0900003"},
+            {"name": "Code Beautify", "shortcutKey": "e", "url": "https://codebeautify.org/"},
         ]
     }
 ]
