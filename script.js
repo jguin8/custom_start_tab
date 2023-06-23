@@ -29,8 +29,8 @@ const MASTER_MAP = [
             {
                 "groupName": "Astronomer",
                 "items":[
-                    {"name": "Home", "shortcutKey": "z", "url": "https://app.gcp0001.us-east4.astronomer.io/w/ck2fbj7td52e50936gtki4sa7"},
-                    {"name": "Token", "shortcutKey": "x", "url": "https://app.gcp0001.us-east4.astronomer.io/token"},
+                    {"name": "Home", "shortcutKey": "z", "url": "https://cloud.astronomer.io/clj7oy01y00ni01nk0hxrs3vp/deployments"},
+                    {"name": "Token", "shortcutKey": "x", "url": "cloud.astronomer.io/token"},
                     {"name": "Forum", "shortcutKey": "x", "url": "https://forum.astronomer.io/top?period=yearly"}
                 ]
             }
@@ -42,7 +42,7 @@ const MASTER_MAP = [
             {
                 "groupName": "Switchboard",
                 "items":[
-                    {"name": "Deployment", "shortcutKey": "z", "url": "https://deployments.gcp0001.us-east4.astronomer.io/magnetic-sunspot-7057/airflow/home"},
+                    {"name": "Deployment", "shortcutKey": "z", "url": "https://merchant-labs.astronomer.run/dm0mate0/home"},
                     {"name": "Local Instance", "shortcutKey": "z", "url": "http://localhost:8081/"},
                     {"name": "Cosmos", "shortcutKey": "x", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/Switchboard/providers/Microsoft.DocumentDb/databaseAccounts/nile-switchboard/overview"},
                     {"name": "Blob Storage", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/Switchboard/providers/Microsoft.Storage/storageAccounts/switchboard/overview"},
@@ -54,7 +54,7 @@ const MASTER_MAP = [
             {
                 "groupName": "Soapbox",
                 "items":[
-                    {"name": "Deployment", "shortcutKey": "z", "url": "https://deployments.gcp0001.us-east4.astronomer.io/elementary-astronaut-5472/airflow/home"},
+                    {"name": "Deployment", "shortcutKey": "z", "url": "https://merchant-labs.astronomer.run/dzor8z0d/home"},
                     {"name": "Local Instance", "shortcutKey": "z", "url": "http://localhost:8080/"},
                     {"name": "Cosmos", "shortcutKey": "x", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/mlabs/providers/Microsoft.DocumentDb/databaseAccounts/mlabs/overview"},
                     {"name": "Vercel", "shortcutKey": "x", "url": "https://vercel.com/mlabs/linker"},
