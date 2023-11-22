@@ -3,7 +3,7 @@
 
 :root {
     --bg-color: #223030;
-    --text-color: #dddddd;
+    --text-color: black;
     --bg-image: url("assets/bg.jpg");
     --SHORTCUT_TIMEOUT: 1.5s;
 }
@@ -26,6 +26,7 @@ body {
 #logo {
     padding-top: 10vh;
     text-align: center;
+    color: white;
 }
 #logo h1 {
     font-weight: 200;
@@ -36,7 +37,7 @@ body {
     font-weight: 200;
     font-size: 2rem;
     margin-top: 0;
-    opacity: 0.5;
+    opacity: 0.95;
 }
 
 #content {
@@ -60,7 +61,7 @@ body {
     width: 20%;
     padding: .5% 1.5%;
     margin: .25%;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.75);
     border-radius: 0.5em;
 }
 .group h1 {
