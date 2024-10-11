@@ -1,4 +1,4 @@
-const NAME = "Tevett";
+const NAME = "Josh";
 const WELCOME_MESSAGE_TEMPLATE = ["night", "morning", "afternoon", "evening"];
 
 // All shortcuts are in a `SHORTCUT_STARTER+shortcutKey` format. 
@@ -22,8 +22,7 @@ const MASTER_MAP = [
                     {"name": "Great Star", "shortcutKey": "a", "url": "https://6145117.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
                     {"name": "Terra Rose", "shortcutKey": "s", "url": "https://6751627.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
                     {"name": "Everyone Designs", "shortcutKey": "d", "url": "https://7236299.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
-                    {"name": "House of Outdoors", "shortcutKey": "f", "url": "https://7576050.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
-                    {"name": "Efofex", "shortcutKey": "f", "url": "https://8157261.app.netsuite.com/app/center/card.nl?sc=-29&whence="}
+                    {"name": "House of Outdoors", "shortcutKey": "f", "url": "https://7576050.app.netsuite.com/app/center/card.nl?sc=-29&whence="}
                 ]
             },
             {
@@ -49,17 +48,6 @@ const MASTER_MAP = [
                     {"name": "sFTP Storage", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourcegroups/Switchboard/providers/Microsoft.Storage/storageAccounts/switchboardsftp/overview"}, 
                     {"name": "True Commerce", "shortcutKey": "q", "url": "https://foundry.truecommerce.com/core/Default.html"},
                     {"name": "Infor", "shortcutKey": "e", "url": "https://mingle-portal.inforcloudsuite.com/X9K98RYL2D6P5AD4_PRD"}
-                ]
-            },
-            {
-                "groupName": "Soapbox",
-                "items":[
-                    {"name": "Deployment", "shortcutKey": "z", "url": "https://merchant-labs.astronomer.run/dzor8z0d/home"},
-                    {"name": "Local Instance", "shortcutKey": "z", "url": "http://localhost:8080/"},
-                    {"name": "Cosmos", "shortcutKey": "x", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/mlabs/providers/Microsoft.DocumentDb/databaseAccounts/mlabs/overview"},
-                    {"name": "Vercel", "shortcutKey": "x", "url": "https://vercel.com/mlabs/linker"},
-                    {"name": "Blob Storage", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/mlabs/providers/Microsoft.Storage/storageAccounts/mlabstorage/overview"},
-                    {"name": "Reports", "shortcutKey": "q", "url": "https://terrarose.sharepoint.com/sites/nile/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2Fnile%2FShared%20Documents%2FReports&viewid=42a6f1a6%2D6881%2D4632%2D9d5c%2D07b55a3a8a8d"}
                 ]
             }
         ]
