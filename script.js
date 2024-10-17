@@ -55,7 +55,7 @@ const MASTER_MAP = [
     {
         "groupName": "Tools",
         "items":[
-            {"name": "Shopify", "shortcutKey": "s", "url": "https://accounts.shopify.com/lookup?rid=69dcf325-d04b-49d2-a709-caf2f5a6d9e4&verify=1729184472-o%2BkPuNCK0DmEY791m0cLeTjaNaTN%2FVkQxvOdFVKxjdM%3D"},
+            {"name": "Shopify", "shortcutKey": "s", "url": "https://www.shopify.com/partners"},
             {"name": "Fivetran", "shortcutKey": "f", "url": "https://fivetran.com/login"},
             {"name": "CRON", "shortcutKey": "x", "url": "https://crontab.guru/#0_0_*_*_3"},
             {"name": "Azure Portal", "shortcutKey": "z", "url": "https://portal.azure.com/#home"},
