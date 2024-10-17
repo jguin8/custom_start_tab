@@ -19,10 +19,10 @@ const MASTER_MAP = [
             {
                 "groupName": "NetSuite",
                 "items":[
-                    {"name": "Great Star", "shortcutKey": "a", "url": "https://6145117.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
-                    {"name": "Terra Rose", "shortcutKey": "s", "url": "https://6751627.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
-                    {"name": "Everyone Designs", "shortcutKey": "d", "url": "https://7236299.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
-                    {"name": "House of Outdoors", "shortcutKey": "f", "url": "https://7576050.app.netsuite.com/app/center/card.nl?sc=-29&whence="}
+                    {"name": "Great Star", "shortcutKey": "g", "url": "https://6145117.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
+                    {"name": "Terra Rose", "shortcutKey": "t", "url": "https://6751627.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
+                    {"name": "Everyone Designs", "shortcutKey": "e", "url": "https://7236299.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
+                    {"name": "House of Outdoors", "shortcutKey": "h", "url": "https://7576050.app.netsuite.com/app/center/card.nl?sc=-29&whence="}
                 ]
             },
             {
@@ -41,13 +41,13 @@ const MASTER_MAP = [
             {
                 "groupName": "Switchboard",
                 "items":[
-                    {"name": "Deployment", "shortcutKey": "z", "url": "https://merchant-labs.astronomer.run/dm0mate0/home"},
+                    {"name": "Deployment", "shortcutKey": "b", "url": "https://merchant-labs.astronomer.run/dm0mate0/home"},
                     {"name": "Local Instance", "shortcutKey": "z", "url": "http://localhost:8081/"},
-                    {"name": "Cosmos", "shortcutKey": "x", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/Switchboard/providers/Microsoft.DocumentDb/databaseAccounts/nile-switchboard/overview"},
-                    {"name": "Blob Storage", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/Switchboard/providers/Microsoft.Storage/storageAccounts/switchboard/overview"},
+                    {"name": "Cosmos", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/Switchboard/providers/Microsoft.DocumentDb/databaseAccounts/nile-switchboard/overview"},
+                    {"name": "Blob Storage", "shortcutKey": "l", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/Switchboard/providers/Microsoft.Storage/storageAccounts/switchboard/overview"},
                     {"name": "sFTP Storage", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourcegroups/Switchboard/providers/Microsoft.Storage/storageAccounts/switchboardsftp/overview"}, 
                     {"name": "True Commerce", "shortcutKey": "q", "url": "https://foundry.truecommerce.com/core/Default.html"},
-                    {"name": "Infor", "shortcutKey": "e", "url": "https://mingle-portal.inforcloudsuite.com/X9K98RYL2D6P5AD4_PRD"}
+                    {"name": "Infor", "shortcutKey": "i", "url": "https://mingle-portal.inforcloudsuite.com/X9K98RYL2D6P5AD4_PRD"}
                 ]
             }
         ]
@@ -55,12 +55,13 @@ const MASTER_MAP = [
     {
         "groupName": "Tools",
         "items":[
-            {"name": "Fivetran", "shortcutKey": "z", "url": "https://fivetran.com/login"},
+            {"name": "Shopify", "shortcutKey": "s", "url": "https://accounts.shopify.com/lookup?rid=69dcf325-d04b-49d2-a709-caf2f5a6d9e4&verify=1729184472-o%2BkPuNCK0DmEY791m0cLeTjaNaTN%2FVkQxvOdFVKxjdM%3D"},
+            {"name": "Fivetran", "shortcutKey": "f", "url": "https://fivetran.com/login"},
             {"name": "CRON", "shortcutKey": "x", "url": "https://crontab.guru/#0_0_*_*_3"},
-            {"name": "Azure Portal", "shortcutKey": "c", "url": "https://portal.azure.com/#home"},
+            {"name": "Azure Portal", "shortcutKey": "z", "url": "https://portal.azure.com/#home"},
             {"name": "Sharepoint", "shortcutKey": "q", "url": "https://terrarose.sharepoint.com/_layouts/15/sharepoint.aspx"},
             {"name": "DataDog", "shortcutKey": "w", "url": "https://us3.datadoghq.com/account/login/id/2c82dc80-9e62-11ec-b63b-da7ad0900003"},
-            {"name": "Code Beautify", "shortcutKey": "e", "url": "https://codebeautify.org/"},
+            {"name": "Code Beautify", "shortcutKey": "u", "url": "https://codebeautify.org/"},
         ]
     }
 ]
