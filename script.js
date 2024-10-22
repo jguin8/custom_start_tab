@@ -43,9 +43,22 @@ const MASTER_MAP = [
                 "items":[
                     {"name": "Deployment", "shortcutKey": "b", "url": "https://merchant-labs.astronomer.run/dm0mate0/home"},
                     {"name": "Local Instance", "shortcutKey": "z", "url": "http://localhost:8081/"},
+                ]
+            },
+            {
+                "groupName": "Azure",
+                "items":[
                     {"name": "Cosmos", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/Switchboard/providers/Microsoft.DocumentDb/databaseAccounts/nile-switchboard/overview"},
                     {"name": "Blob Storage", "shortcutKey": "l", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/Switchboard/providers/Microsoft.Storage/storageAccounts/switchboard/overview"},
                     {"name": "sFTP Storage", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourcegroups/Switchboard/providers/Microsoft.Storage/storageAccounts/switchboardsftp/overview"}, 
+                    {"name": "True Commerce", "shortcutKey": "q", "url": "https://foundry.truecommerce.com/core/Default.html"},
+                    {"name": "Infor", "shortcutKey": "i", "url": "https://mingle-portal.inforcloudsuite.com/X9K98RYL2D6P5AD4_PRD"}
+                ]
+            },
+            {
+                "groupName": "Azure",
+                "items":[
+                    {"name": "Power BI", "shortcutKey": "p", "url": "https://app.powerbi.com/home?tenant=7ef41f87-2d43-43b6-8d92-9e261334bc5d&experience=power-bi"},
                     {"name": "True Commerce", "shortcutKey": "q", "url": "https://foundry.truecommerce.com/core/Default.html"},
                     {"name": "Infor", "shortcutKey": "i", "url": "https://mingle-portal.inforcloudsuite.com/X9K98RYL2D6P5AD4_PRD"}
                 ]
