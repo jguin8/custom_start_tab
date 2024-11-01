@@ -73,6 +73,7 @@ const MASTER_MAP = [
             {"name": "Sharepoint", "shortcutKey": "q", "url": "https://terrarose.sharepoint.com/_layouts/15/sharepoint.aspx"},
             {"name": "DataDog", "shortcutKey": "w", "url": "https://us3.datadoghq.com/account/login/id/2c82dc80-9e62-11ec-b63b-da7ad0900003"},
             {"name": "Code Beautify", "shortcutKey": "u", "url": "https://codebeautify.org/"},
+            {"name": "Bill/Divvy", "shortcutKey": "v", "url": "https://app.divvy.co/"},
         ]
     }
 ]
