@@ -74,6 +74,7 @@ const MASTER_MAP = [
             {"name": "DataDog", "shortcutKey": "w", "url": "https://us3.datadoghq.com/account/login/id/2c82dc80-9e62-11ec-b63b-da7ad0900003"},
             {"name": "Code Beautify", "shortcutKey": "u", "url": "https://codebeautify.org/"},
             {"name": "Bill/Divvy", "shortcutKey": "v", "url": "https://app.divvy.co/"},
+            {"name": "DSCO/Rithum", "shortcutKey": "r", "url": "https://account.commercehub.com/u/login/identifier?state=hKFo2SBOaGl1SkJLWHBYVXNMSWNQb25LVUw3bW1YQ3dURTdGZaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEJnTTUybUVrWlZTeHRmaVgwd21iczkycEFJRmZHTmNHo2NpZNkgTTFDV1gyOENtOU5XSVhlR3piejR5SFB6OFBkM2NKT3E"},
         ]
     }
 ]
