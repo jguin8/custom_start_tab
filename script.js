@@ -75,6 +75,7 @@ const MASTER_MAP = [
             {"name": "Code Beautify", "shortcutKey": "u", "url": "https://codebeautify.org/"},
             {"name": "Bill/Divvy", "shortcutKey": "v", "url": "https://app.divvy.co/"},
             {"name": "DSCO/Rithum", "shortcutKey": "r", "url": "https://account.commercehub.com/u/login/identifier?state=hKFo2SBOaGl1SkJLWHBYVXNMSWNQb25LVUw3bW1YQ3dURTdGZaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEJnTTUybUVrWlZTeHRmaVgwd21iczkycEFJRmZHTmNHo2NpZNkgTTFDV1gyOENtOU5XSVhlR3piejR5SFB6OFBkM2NKT3E"},
+            {"name": "Retail Link", "shortcutKey": "l", "url": "https://retaillink.login.wal-mart.com/?resumePath=/as/1AG8m8zddi/resume/as/authorization.ping"},
         ]
     }
 ]
