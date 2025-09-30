@@ -58,7 +58,8 @@ const MASTER_MAP = [
                 "items":[
                     {"name": "Power BI", "shortcutKey": "p", "url": "https://app.powerbi.com/home?tenant=7ef41f87-2d43-43b6-8d92-9e261334bc5d&experience=power-bi"},
                     {"name": "True Commerce", "shortcutKey": "q", "url": "https://foundry.truecommerce.com/core/Default.html"},
-                    {"name": "Infor", "shortcutKey": "i", "url": "https://mingle-portal.inforcloudsuite.com/X9K98RYL2D6P5AD4_PRD"}
+                    {"name": "Infor", "shortcutKey": "i", "url": "https://mingle-portal.inforcloudsuite.com/X9K98RYL2D6P5AD4_PRD"},
+                    {"name": "SharePoint", "shortcutKey": "s", "url": "https://terrarose.sharepoint.com/_layouts/15/sharepoint.aspx?login_hint=josh.guin%40choosenile.com"}
                 ]
             }
         ]
