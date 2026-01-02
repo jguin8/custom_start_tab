@@ -1,9 +1,17 @@
 const NAME = "Josh";
 const WELCOME_MESSAGE_TEMPLATE = ["night", "morning", "afternoon", "evening"];
 
-const SHORTCUT_STARTER = 'tab';
+// All shortcuts are in a `SHORTCUT_STARTER+shortcutKey` format. 
+// So, for example, pressing `tab+q` would redirect you to https://google.com/?q=q
+const SHORTCUT_STARTER = 'tab' 
+
+// How much time (in milliseconds) you have to press shortcutKey after pressing SHORTCUT_STARTER.
+// Also change --SHORTCUT_TIMEOUT in styles.css if you change this option.
 const SHORTCUT_TIMEOUT = 1500;
 
+// The groups of links are generated from this object. Edit it to edit the page's contents.
+// shortcutKey must hold an all-lowercase single button. Theoretically should work with values like `esc` and `f1`,
+// but intended to be used with just regular latin letters.
 const MASTER_MAP = [
     {
         "groupName": "General",
@@ -34,6 +42,7 @@ const MASTER_MAP = [
                 "groupName": "Switchboard",
                 "items":[
                     {"name": "Deployment", "shortcutKey": "b", "url": "https://merchant-labs.astronomer.run/dm0mate0/home"},
+                    // {"name": "Local Instance", "shortcutKey": "z", "url": "http://localhost:8081/"},
                 ]
             },
             {
@@ -41,6 +50,7 @@ const MASTER_MAP = [
                 "items":[
                     {"name": "Cosmos", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/Switchboard/providers/Microsoft.DocumentDb/databaseAccounts/nile-switchboard/overview"},
                     {"name": "Blob Storage", "shortcutKey": "l", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourceGroups/Switchboard/providers/Microsoft.Storage/storageAccounts/switchboard/overview"},
+                    //{"name": "sFTP Storage", "shortcutKey": "c", "url": "https://portal.azure.com/#@terrarose.com/resource/subscriptions/6d4d748d-18c9-4126-a3b6-9c5cf87fb739/resourcegroups/Switchboard/providers/Microsoft.Storage/storageAccounts/switchboardsftp/overview"}
                 ]
             },
             {
@@ -58,72 +68,32 @@ const MASTER_MAP = [
         "items":[
             {"name": "Shopify", "shortcutKey": "s", "url": "https://www.shopify.com/partners"},
             {"name": "Fivetran", "shortcutKey": "f", "url": "https://fivetran.com/login"},
+            // {"name": "CRON", "shortcutKey": "x", "url": "https://crontab.guru/#0_0_*_*_3"},
             {"name": "Azure Portal", "shortcutKey": "z", "url": "https://portal.azure.com/#home"},
             {"name": "Sharepoint", "shortcutKey": "q", "url": "https://terrarose.sharepoint.com/_layouts/15/sharepoint.aspx"},
+            // {"name": "DataDog", "shortcutKey": "w", "url": "https://us3.datadoghq.com/account/login/id/2c82dc80-9e62-11ec-b63b-da7ad0900003"},
             {"name": "Code Beautify", "shortcutKey": "u", "url": "https://codebeautify.org/"},
-            {"name": "DSCO/Rithum", "shortcutKey": "r", "url": "https://account.commercehub.com/u/login/identifier"},
+            {"name": "DSCO/Rithum", "shortcutKey": "r", "url": "https://account.commercehub.com/u/login/identifier?state=hKFo2SBOaGl1SkJLWHBYVXNMSWNQb25LVUw3bW1YQ3dURTdGZaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIEJnTTUybUVrWlZTeHRmaVgwd21iczkycEFJRmZHTmNHo2NpZNkgTTFDV1gyOENtOU5XSVhlR3piejR5SFB6OFBkM2NKT3E"},
             {"name": "Retail Link/Supplier One", "shortcutKey": "l", "url": "https://retaillink.login.wal-mart.com/"},
             {"name": "Pulse", "shortcutKey": "l", "url": "https://pulse.lumatrak.com"},
         ]
     }
-];
+]
+
 
 let $container = document.getElementById("content");
 let getUrl = {};
+
 let $shortcutDisplayList = document.getElementsByClassName("shortcut");
 let listeningForShortcut = false;
 let listenerTimeout;
 
-/* ---------- GOOGLE SEARCH BAR (BELOW WELCOME SECTION) ---------- */
-function setupSearchBar(){
-    if (!$container) return;
-
-    const wrapper = document.createElement("div");
-    wrapper.style.display = "flex";
-    wrapper.style.justifyContent = "center";
-    wrapper.style.margin = "16px 0 24px";
-
-    const form = document.createElement("form");
-    form.action = "https://www.google.com/search";
-    form.method = "GET";
-    form.target = "_blank";
-    form.autocomplete = "off";
-    form.style.display = "flex";
-    form.style.gap = "8px";
-    form.style.width = "100%";
-    form.style.maxWidth = "600px";
-
-    const input = document.createElement("input");
-    input.name = "q";
-    input.type = "text";
-    input.placeholder = "Search Google…";
-    input.style.flex = "1";
-    input.style.padding = "10px 12px";
-    input.style.fontSize = "16px";
-
-    const button = document.createElement("button");
-    button.type = "submit";
-    button.innerText = "Search";
-
-    // Prevent shortcut hijacking while typing
-    input.addEventListener("keydown", e => e.stopPropagation());
-    input.addEventListener("keyup", e => e.stopPropagation());
-
-    form.appendChild(input);
-    form.appendChild(button);
-    wrapper.appendChild(form);
-
-    // 🔑 Insert BELOW welcome section, ABOVE shortcuts
-    $container.parentNode.insertBefore(wrapper, $container);
-}
-/* -------------------------------------------------------------- */
-
 function setupWelcomeMessage(){
     let curHours = new Date().getHours();
-    curHours = Math.floor(curHours / 6);
-    if (curHours === 4) curHours = 3;
-    document.getElementById("welcome-string").innerHTML =
-        "Good " + WELCOME_MESSAGE_TEMPLATE[curHours] + ", " + NAME;
+    curHours = Math.floor(curHours/6); // Simply dividing current hours by 6 proves to be a good enough aproximation.
+    if (curHours == 4) curHours = 3;
+    let welcome = "Good " + WELCOME_MESSAGE_TEMPLATE[curHours] + ", " + NAME;
+    document.getElementById("welcome-string").innerHTML = welcome;
 }
 
 function setupGroups(){
@@ -139,79 +109,87 @@ function setupGroups(){
         group.appendChild(header);
 
         if (curGroupData.items) {
-            for (let item of curGroupData.items){
-                let p = document.createElement("p");
-                let a = document.createElement("a");
-                a.href = item.url;
-                a.innerHTML = item.name;
-
-                let s = document.createElement("span");
-                s.className = "shortcut";
-                s.innerHTML = item.shortcutKey;
-
-                p.appendChild(a);
-                p.appendChild(s);
-                group.appendChild(p);
-
-                getUrl[item.shortcutKey] = item.url;
+            for (let j = 0; j < curGroupData.items.length; j++){
+                let curItemData = curGroupData.items[j];
+    
+                let pContainer = document.createElement("p");
+                group.appendChild(pContainer);
+    
+                let link = document.createElement("a");
+                link.innerHTML = curItemData.name;
+                link.setAttribute("href", curItemData.url);
+                pContainer.appendChild(link);
+    
+                let shortcutDisplay = document.createElement("span");
+                shortcutDisplay.innerHTML = curItemData.shortcutKey;
+                shortcutDisplay.className = "shortcut";
+                shortcutDisplay.style.animation = "none";
+                pContainer.appendChild(shortcutDisplay);
+    
+                getUrl[curItemData.shortcutKey] = curItemData.url
             }
         } else if (curGroupData.subGroups) {
-            for (let sg of curGroupData.subGroups){
-                let sub = document.createElement("div");
-                sub.className = "subgroup";
+            for (let j = 0; j < curGroupData.subGroups.length; j++){
+                let curSubGroupData = curGroupData.subGroups[j];
+    
+                let subGroup = document.createElement("div");
+                subGroup.className = "subgroup";
+                group.appendChild(subGroup);
 
-                let h2 = document.createElement("h2");
-                h2.innerHTML = sg.groupName;
-                sub.appendChild(h2);
+                let header = document.createElement("h2");
+                header.innerHTML = curSubGroupData.groupName;
+                subGroup.appendChild(header);
 
-                for (let item of sg.items){
-                    let p = document.createElement("p");
-                    let a = document.createElement("a");
-                    a.href = item.url;
-                    a.innerHTML = item.name;
-
-                    let s = document.createElement("span");
-                    s.className = "shortcut";
-                    s.innerHTML = item.shortcutKey;
-
-                    p.appendChild(a);
-                    p.appendChild(s);
-                    sub.appendChild(p);
-
-                    getUrl[item.shortcutKey] = item.url;
+                for (let j = 0; j < curSubGroupData.items.length; j++){
+                    let curItemData = curSubGroupData.items[j];
+        
+                    let pContainer = document.createElement("p");
+                    subGroup.appendChild(pContainer);
+        
+                    let link = document.createElement("a");
+                    link.innerHTML = curItemData.name;
+                    link.setAttribute("href", curItemData.url);
+                    pContainer.appendChild(link);
+        
+                    let shortcutDisplay = document.createElement("span");
+                    shortcutDisplay.innerHTML = curItemData.shortcutKey;
+                    shortcutDisplay.className = "shortcut";
+                    shortcutDisplay.style.animation = "none";
+                    pContainer.appendChild(shortcutDisplay);
+        
+                    getUrl[curItemData.shortcutKey] = curItemData.url
                 }
-
-                group.appendChild(sub);
             }
         }
     }
 }
 
-function shortcutListener(e){
+function shortcutListener(e) {
     let key = e.key.toLowerCase();
 
-    if (listeningForShortcut && getUrl[key]){
+    if (listeningForShortcut && getUrl.hasOwnProperty(key)){
         window.location = getUrl[key];
     }
 
-    if (key === SHORTCUT_STARTER){
+    if (key === SHORTCUT_STARTER) {
         clearTimeout(listenerTimeout);
         listeningForShortcut = true;
 
-        for (let el of $shortcutDisplayList){
-            el.style.animation = "none";
-            setTimeout(() => el.style.animation = "", 10);
+        // Animation reset
+        for (let i = 0; i < $shortcutDisplayList.length; i++){
+            $shortcutDisplayList[i].style.animation = "none";
+            setTimeout(function() { $shortcutDisplayList[i].style.animation = ''; }, 10);
         }
 
-        listenerTimeout = setTimeout(() => listeningForShortcut = false, SHORTCUT_TIMEOUT);
+        listenerTimeout = setTimeout(function(){ listeningForShortcut = false; }, SHORTCUT_TIMEOUT);
     }
 }
 
 function main(){
+
     setupWelcomeMessage();
-    setupSearchBar();
     setupGroups();
-    document.addEventListener("keyup", shortcutListener, false);
+    document.addEventListener('keyup', shortcutListener, false);
 }
 
-main();
+main()
