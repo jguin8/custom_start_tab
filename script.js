@@ -11,11 +11,11 @@ const MASTER_MAP = [
             {
                 "groupName": "ERP Systems",
                 "items":[
-                    {"name": "Great Star", "shortcutKey": "g", "url": "https://6145117.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
                     {"name": "Terra Rose", "shortcutKey": "t", "url": "https://6751627.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
-                    {"name": "Everyone Designs", "shortcutKey": "e", "url": "https://7236299.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
-                    {"name": "House of Outdoors", "shortcutKey": "h", "url": "https://7576050.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
-                    {"name": "Great Star SAP", "shortcutKey": "h", "url": "https://my433127.s4hana.cloud.sap/ui"}
+                    //{"name": "Everyone Designs", "shortcutKey": "e", "url": "https://7236299.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
+                    //{"name": "House of Outdoors", "shortcutKey": "h", "url": "https://7576050.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
+                    {"name": "Great Star SAP", "shortcutKey": "h", "url": "https://my433127.s4hana.cloud.sap/ui"},
+                    {"name": "Great Star NetSuite", "shortcutKey": "g", "url": "https://6145117.app.netsuite.com/app/center/card.nl?sc=-29&whence="}
                 ]
             },
             {
