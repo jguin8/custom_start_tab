@@ -21,9 +21,11 @@ const MASTER_MAP = [
             {
                 "groupName": "Tools",
                 "items":[
+                    {"name": "M365 Admin", "shortcutKey": "o", "url": "https://admin.microsoft.com/Adminportal/Home#/homepage"},
                     {"name": "Asana", "shortcutKey": "z", "url": "app.asana.com/-/login"},
                     {"name": "Bill/Divvy", "shortcutKey": "x", "url": "https://app.divvy.co/login"},
-                    {"name": "Rippling", "shortcutKey": "x", "url": "https://app.rippling.com/login"}
+                    {"name": "Rippling", "shortcutKey": "x", "url": "https://app.rippling.com/login"},
+                    
                 ]
             }
         ]
