@@ -15,6 +15,7 @@ const MASTER_MAP = [
                     //{"name": "Everyone Designs", "shortcutKey": "e", "url": "https://7236299.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
                     //{"name": "House of Outdoors", "shortcutKey": "h", "url": "https://7576050.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
                     {"name": "Great Star SAP", "shortcutKey": "h", "url": "https://my433127.s4hana.cloud.sap/ui"},
+                    {"name": "Great Star SAP Help Desk", "shortcutKey": "h", "url": "https://gstu.atlassian.net/servicedesk/customer/portals"},
                     {"name": "Great Star NetSuite", "shortcutKey": "g", "url": "https://6145117.app.netsuite.com/app/center/card.nl?sc=-29&whence="}
                 ]
             },
