@@ -12,6 +12,7 @@ const MASTER_MAP = [
                 "groupName": "ERP Systems",
                 "items":[
                     {"name": "Terra Rose", "shortcutKey": "t", "url": "https://6751627.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
+                    {"name": "Terra Rose Oracle Cloud, "shortcutKey": "t", "url": "https://idcs-d1c722842bbc49d58e9c746cb2bfaa96.identity.oraclecloud.com/ui/v1/signin"},
                     //{"name": "Everyone Designs", "shortcutKey": "e", "url": "https://7236299.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
                     //{"name": "House of Outdoors", "shortcutKey": "h", "url": "https://7576050.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
                     {"name": "Great Star SAP", "shortcutKey": "h", "url": "https://my433127.s4hana.cloud.sap/ui"},
