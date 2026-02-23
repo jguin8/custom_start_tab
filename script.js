@@ -62,6 +62,7 @@ const MASTER_MAP = [
     {
         "groupName": "Tools",
         "items":[
+            {"name": "Shopify Owned", "shortcutKey": "s", "url": "https://admin.shopify.com/store/googansquad"},
             {"name": "Shopify", "shortcutKey": "s", "url": "https://www.shopify.com/partners"},
             {"name": "Fivetran", "shortcutKey": "f", "url": "https://fivetran.com/login"},
             {"name": "Azure Portal", "shortcutKey": "z", "url": "https://portal.azure.com/#home"},
