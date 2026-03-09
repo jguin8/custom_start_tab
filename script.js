@@ -27,8 +27,7 @@ const MASTER_MAP = [
                     {"name": "M365 Admin", "shortcutKey": "o", "url": "https://admin.microsoft.com/Adminportal/Home#/homepage"},
                     {"name": "Asana", "shortcutKey": "z", "url": "https://app.asana.com/1/1155700125982772/home"},
                     {"name": "Bill/Divvy", "shortcutKey": "x", "url": "https://spend.bill.com"},
-                    {"name": "Rippling", "shortcutKey": "x", "url": "https://app.rippling.com/login"},
-                    {"name": "Apple Business", "shortcutKey": "l", "url": "https://business.apple.com/#/main/users"}
+                    {"name": "Rippling", "shortcutKey": "x", "url": "https://app.rippling.com/login"}
                 ]
             }
         ]
@@ -71,7 +70,8 @@ const MASTER_MAP = [
             {"name": "DSCO/Rithum", "shortcutKey": "r", "url": "https://account.commercehub.com/u/login/identifier"},
             {"name": "Retail Link/Supplier One", "shortcutKey": "l", "url": "https://retaillink.login.wal-mart.com/"},
             {"name": "Pulse", "shortcutKey": "l", "url": "https://pulse.lumatrak.com"},
-            {"name": "Data Scorecard", "shortcutKey": "l", "url": "https://terrarose.sharepoint.com/:x:/r/sites/nile/_layouts/15/doc2.aspx?sourcedoc=%7B4BF550FB-F5BD-4744-B0C3-BDBD1036316E%7D&file=Data%20Scorecard.xlsx&action=default&mobileredirect=true"},
+            {"name": "Apple Business", "shortcutKey": "l", "url": "https://business.apple.com/#/main/users"},
+            {"name": "Data Scorecard", "shortcutKey": "l", "url": "https://terrarose.sharepoint.com/:x:/r/sites/nile/_layouts/15/doc2.aspx?sourcedoc=%7B4BF550FB-F5BD-4744-B0C3-BDBD1036316E%7D&file=Data%20Scorecard.xlsx&action=default&mobileredirect=true"}
         ]
     }
 ];
