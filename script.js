@@ -28,7 +28,7 @@ const MASTER_MAP = [
                     {"name": "Asana", "shortcutKey": "z", "url": "https://app.asana.com/1/1155700125982772/home"},
                     {"name": "Bill/Divvy", "shortcutKey": "x", "url": "https://spend.bill.com"},
                     {"name": "Rippling", "shortcutKey": "x", "url": "https://app.rippling.com/login"},
-                    
+                    {"name": "Apple Business", "shortcutKey": "l", "url": "https://business.apple.com/#/main/users"}
                 ]
             }
         ]
