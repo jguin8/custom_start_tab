@@ -1,17 +1,9 @@
 const NAME = "Josh";
 const WELCOME_MESSAGE_TEMPLATE = ["night", "morning", "afternoon", "evening"];
 
-// All shortcuts are in a `SHORTCUT_STARTER+shortcutKey` format. 
-// So, for example, pressing `tab+q` would redirect you to https://google.com/?q=q
-const SHORTCUT_STARTER = 'tab' 
-
-// How much time (in milliseconds) you have to press shortcutKey after pressing SHORTCUT_STARTER.
-// Also change --SHORTCUT_TIMEOUT in styles.css if you change this option.
+const SHORTCUT_STARTER = 'tab';
 const SHORTCUT_TIMEOUT = 1500;
 
-// The groups of links are generated from this object. Edit it to edit the page's contents.
-// shortcutKey must hold an all-lowercase single button. Theoretically should work with values like `esc` and `f1`,
-// but intended to be used with just regular latin letters.
 const MASTER_MAP = [
     {
         "groupName": "General",
@@ -82,22 +74,64 @@ const MASTER_MAP = [
             {"name": "Data Scorecard", "shortcutKey": "l", "url": "https://terrarose.sharepoint.com/:x:/r/sites/nile/_layouts/15/doc2.aspx?sourcedoc=%7B4BF550FB-F5BD-4744-B0C3-BDBD1036316E%7D&file=Data%20Scorecard.xlsx&action=default&mobileredirect=true"}
         ]
     }
-]
-
+];
 
 let $container = document.getElementById("content");
 let getUrl = {};
-
 let $shortcutDisplayList = document.getElementsByClassName("shortcut");
 let listeningForShortcut = false;
 let listenerTimeout;
 
+/* ---------- GOOGLE SEARCH BAR (BELOW WELCOME SECTION) ---------- */
+function setupSearchBar(){
+    if (!$container) return;
+
+    const wrapper = document.createElement("div");
+    wrapper.style.display = "flex";
+    wrapper.style.justifyContent = "center";
+    wrapper.style.margin = "16px 0 24px";
+
+    const form = document.createElement("form");
+    form.action = "https://www.google.com/search";
+    form.method = "GET";
+    form.target = "_blank";
+    form.autocomplete = "off";
+    form.style.display = "flex";
+    form.style.gap = "8px";
+    form.style.width = "100%";
+    form.style.maxWidth = "600px";
+
+    const input = document.createElement("input");
+    input.name = "q";
+    input.type = "text";
+    input.placeholder = "Search Google…";
+    input.style.flex = "1";
+    input.style.padding = "10px 12px";
+    input.style.fontSize = "16px";
+
+    const button = document.createElement("button");
+    button.type = "submit";
+    button.innerText = "Search";
+
+    // Prevent shortcut hijacking while typing
+    input.addEventListener("keydown", e => e.stopPropagation());
+    input.addEventListener("keyup", e => e.stopPropagation());
+
+    form.appendChild(input);
+    form.appendChild(button);
+    wrapper.appendChild(form);
+
+    // 🔑 Insert BELOW welcome section, ABOVE shortcuts
+    $container.parentNode.insertBefore(wrapper, $container);
+}
+/* -------------------------------------------------------------- */
+
 function setupWelcomeMessage(){
     let curHours = new Date().getHours();
-    curHours = Math.floor(curHours/6); // Simply dividing current hours by 6 proves to be a good enough aproximation.
-    if (curHours == 4) curHours = 3;
-    let welcome = "Good " + WELCOME_MESSAGE_TEMPLATE[curHours] + ", " + NAME;
-    document.getElementById("welcome-string").innerHTML = welcome;
+    curHours = Math.floor(curHours / 6);
+    if (curHours === 4) curHours = 3;
+    document.getElementById("welcome-string").innerHTML =
+        "Good " + WELCOME_MESSAGE_TEMPLATE[curHours] + ", " + NAME;
 }
 
 function setupGroups(){
@@ -113,87 +147,79 @@ function setupGroups(){
         group.appendChild(header);
 
         if (curGroupData.items) {
-            for (let j = 0; j < curGroupData.items.length; j++){
-                let curItemData = curGroupData.items[j];
-    
-                let pContainer = document.createElement("p");
-                group.appendChild(pContainer);
-    
-                let link = document.createElement("a");
-                link.innerHTML = curItemData.name;
-                link.setAttribute("href", curItemData.url);
-                pContainer.appendChild(link);
-    
-                let shortcutDisplay = document.createElement("span");
-                shortcutDisplay.innerHTML = curItemData.shortcutKey;
-                shortcutDisplay.className = "shortcut";
-                shortcutDisplay.style.animation = "none";
-                pContainer.appendChild(shortcutDisplay);
-    
-                getUrl[curItemData.shortcutKey] = curItemData.url
+            for (let item of curGroupData.items){
+                let p = document.createElement("p");
+                let a = document.createElement("a");
+                a.href = item.url;
+                a.innerHTML = item.name;
+
+                let s = document.createElement("span");
+                s.className = "shortcut";
+                s.innerHTML = item.shortcutKey;
+
+                p.appendChild(a);
+                p.appendChild(s);
+                group.appendChild(p);
+
+                getUrl[item.shortcutKey] = item.url;
             }
         } else if (curGroupData.subGroups) {
-            for (let j = 0; j < curGroupData.subGroups.length; j++){
-                let curSubGroupData = curGroupData.subGroups[j];
-    
-                let subGroup = document.createElement("div");
-                subGroup.className = "subgroup";
-                group.appendChild(subGroup);
+            for (let sg of curGroupData.subGroups){
+                let sub = document.createElement("div");
+                sub.className = "subgroup";
 
-                let header = document.createElement("h2");
-                header.innerHTML = curSubGroupData.groupName;
-                subGroup.appendChild(header);
+                let h2 = document.createElement("h2");
+                h2.innerHTML = sg.groupName;
+                sub.appendChild(h2);
 
-                for (let j = 0; j < curSubGroupData.items.length; j++){
-                    let curItemData = curSubGroupData.items[j];
-        
-                    let pContainer = document.createElement("p");
-                    subGroup.appendChild(pContainer);
-        
-                    let link = document.createElement("a");
-                    link.innerHTML = curItemData.name;
-                    link.setAttribute("href", curItemData.url);
-                    pContainer.appendChild(link);
-        
-                    let shortcutDisplay = document.createElement("span");
-                    shortcutDisplay.innerHTML = curItemData.shortcutKey;
-                    shortcutDisplay.className = "shortcut";
-                    shortcutDisplay.style.animation = "none";
-                    pContainer.appendChild(shortcutDisplay);
-        
-                    getUrl[curItemData.shortcutKey] = curItemData.url
+                for (let item of sg.items){
+                    let p = document.createElement("p");
+                    let a = document.createElement("a");
+                    a.href = item.url;
+                    a.innerHTML = item.name;
+
+                    let s = document.createElement("span");
+                    s.className = "shortcut";
+                    s.innerHTML = item.shortcutKey;
+
+                    p.appendChild(a);
+                    p.appendChild(s);
+                    sub.appendChild(p);
+
+                    getUrl[item.shortcutKey] = item.url;
                 }
+
+                group.appendChild(sub);
             }
         }
     }
 }
 
-function shortcutListener(e) {
+function shortcutListener(e){
     let key = e.key.toLowerCase();
 
-    if (listeningForShortcut && getUrl.hasOwnProperty(key)){
+    if (listeningForShortcut && getUrl[key]){
         window.location = getUrl[key];
     }
 
-    if (key === SHORTCUT_STARTER) {
+    if (key === SHORTCUT_STARTER){
         clearTimeout(listenerTimeout);
         listeningForShortcut = true;
 
-        // Animation reset
-        for (let i = 0; i < $shortcutDisplayList.length; i++){
-            $shortcutDisplayList[i].style.animation = "none";
-            setTimeout(function() { $shortcutDisplayList[i].style.animation = ''; }, 10);
+        for (let el of $shortcutDisplayList){
+            el.style.animation = "none";
+            setTimeout(() => el.style.animation = "", 10);
         }
 
-        listenerTimeout = setTimeout(function(){ listeningForShortcut = false; }, SHORTCUT_TIMEOUT);
+        listenerTimeout = setTimeout(() => listeningForShortcut = false, SHORTCUT_TIMEOUT);
     }
 }
 
 function main(){
-
     setupWelcomeMessage();
+    setupSearchBar();
     setupGroups();
-    document.addEventListener('keyup', shortcutListener, false);
+    document.addEventListener("keyup", shortcutListener, false);
 }
 
-main()
+main();
