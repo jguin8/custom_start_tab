@@ -64,6 +64,7 @@ const MASTER_MAP = [
                     {"name": "True Commerce", "shortcutKey": "q", "url": "https://foundry.truecommerce.com/core/Default.html"},
                     {"name": "Infor", "shortcutKey": "i", "url": "https://mingle-portal.inforcloudsuite.com/X9K98RYL2D6P5AD4_PRD"},
                     {"name": "Deposco UA", "shortcutKey": "i", "url": "https://nile-ua.deposco.com/deposco/login"},
+                    {"name": "Deposco Demo", "shortcutKey": "i", "url": "https://nile-demo.deposco.com/deposco/login"},
                 ]
             }
         ]
