@@ -78,7 +78,7 @@ const MASTER_MAP = [
             {"name": "Azure Portal", "shortcutKey": "z", "url": "https://portal.azure.com/#home"},
             {"name": "Sharepoint", "shortcutKey": "q", "url": "https://terrarose.sharepoint.com/_layouts/15/sharepoint.aspx"},
             {"name": "Code Beautify", "shortcutKey": "u", "url": "https://codebeautify.org/"},
-            {"name": "DSCO/Rithum", "shortcutKey": "r", "url": "https://account.commercehub.com/u/login/identifier"},
+            {"name": "DSCO/Rithum", "shortcutKey": "r", "url": "https://app.dsco.io/home"},
             {"name": "Retail Link/Supplier One", "shortcutKey": "l", "url": "https://retaillink.login.wal-mart.com/"},
             {"name": "Pulse", "shortcutKey": "l", "url": "https://pulse.lumatrak.com"},
             {"name": "Apple Business", "shortcutKey": "l", "url": "https://business.apple.com/#/main/users"},
