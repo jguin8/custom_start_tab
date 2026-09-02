@@ -19,7 +19,7 @@ const MASTER_MAP = [
             {
                 "groupName": "ERP Systems",
                 "items":[
-                    {"name": "Terra Rose", "shortcutKey": "t", "url": "https://6751627.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
+                    {"name": "NetSuite", "shortcutKey": "t", "url": "https://6751627.app.netsuite.com/app/center/card.nl?sc=-29&whence="},
                     {"name": "NSPB - Prod", "shortcutKey": "p", "url": "https://planning-nilecommerce.epm.us-chicago-1.ocs.oraclecloud.com/HyperionPlanning/"},
                     {"name": "NSPB - Test", "shortcutKey": "p", "url": "https://planning-test-nilecommerce.epm.us-chicago-1.ocs.oraclecloud.com/HyperionPlanning"},
                     {"name": "NSPB - User Management", "shortcutKey": "p", "url": "https://cloud.oracle.com"},
